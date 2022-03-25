@@ -1,0 +1,20 @@
+.product{
+    padding: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.481);
+}
+.product {
+    color: #506D84;
+}
+.product button{
+    border: none;
+    background-color: #fff;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    color:cornflowerblue;
+}
+.product button:hover{
+    color:#fff;
+    background-color: cornflowerblue;
+
+}
