@@ -10,5 +10,24 @@
         "name": "SAMSUNG LF22T350 22'' Full HD IPS LED Monitor",
         "price": 17000,
         "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/lf22t350fhnxza/lf22t350fhnxza-228x228.jpg"
+    },
+    {
+        "id": 3,
+        "name": "SAMSUNG LF22T350 22'' Full HD IPS LED Monitor",
+        "price": 17000,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/lf22t350fhnxza/lf22t350fhnxza-228x228.jpg"
+    },
+    {
+        "id": 4,
+        "name": "SAMSUNG LF22T350 22'' Full HD IPS LED Monitor",
+        "price": 17000,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/lf22t350fhnxza/lf22t350fhnxza-228x228.jpg"
+    
+    },
+    {
+        "id": 5,
+        "name": "SAMSUNG LF22T350 22'' Full HD IPS LED Monitor",
+        "price": 17000,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/lf22t350fhnxza/lf22t350fhnxza-228x228.jpg"
     }
 ]

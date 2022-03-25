@@ -8,8 +8,17 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 20px;
+    grid-gap: 30px;
 }
 .cart-container{
     border-left: 2px solid rgba(0, 0, 0, 0.412) ;
+}
+
+@media screen and (max-width:688px) {
+    .shop-container{
+        grid-template-columns: 3fr 1fr;
+    }
+    .product-container{
+        grid-template-columns: 1fr;
+    }
 }

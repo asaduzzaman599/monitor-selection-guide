@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
 const Shop = () => {
@@ -21,7 +22,8 @@ const Shop = () => {
         if(exist){
             console.log("not",product)
         }else{
-            if(cartItems.length < 5){
+            if(cartItems.length < 4){
+                console.log(cartItems.length)
                 const newCart = [...cartItems,product];
                 setCartItems(newCart)
             console.log(cartItems,product)
@@ -38,7 +40,9 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-
+            {
+                cartItems.map(product => <Cart product={product}></Cart> )
+            } 
             </div>
         </div>
     );
