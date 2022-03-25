@@ -1,0 +1,23 @@
+.cart-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.cart-btn button{
+    width: 75%;
+    padding: 10px 0;
+    margin: 5px;
+    border-radius: 5px;
+}
+.choose-one-btn{
+    border: 1px solid green ;
+    color: green;
+}
+.choose-again-btn{
+    border: 1px solid purple ;
+    color: purple;
+}
+.cart-content h3{
+    text-align: center;
+}

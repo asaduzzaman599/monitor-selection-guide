@@ -1,10 +1,14 @@
+import { Modal } from 'bootstrap';
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
+import RandomProduct from '../RandomProduct/RandomProduct';
 import './Shop.css'
+
 const Shop = () => {
     const [products,setProucts] = useState([]);
     const [cartItems,setCartItems] = useState([]);
+    const [random,setRandom] = useState({});
 
 
     useEffect(
@@ -26,15 +30,22 @@ const Shop = () => {
                 console.log(cartItems.length)
                 const newCart = [...cartItems,product];
                 setCartItems(newCart)
-            console.log(cartItems,product)
             }else{
                 alert('More Then 4 not allowed')
             }
         }
     }
 
+    const randomProduct = () =>{
+        const number = Math.floor(Math.random()*cartItems.length);
+        setRandom(cartItems[number]);
+        setCartItems([]);
+    }
+
     const clearCart = () =>{
         setCartItems([]);
+        setRandom({});
+        
     }
     return (
         <div className='shop-container'>
@@ -44,7 +55,10 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-            <Cart products={cartItems} clearCart={clearCart}></Cart> 
+            {
+                <RandomProduct product={random}></RandomProduct>
+            }
+            <Cart products={cartItems} clearCart={clearCart} randomProduct={randomProduct}></Cart> 
             
             </div>
         </div>

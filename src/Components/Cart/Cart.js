@@ -2,16 +2,16 @@ import React from 'react';
 import './Cart.css'
 import CartItem from '../CartItem/CartItem';
 
-const Cart = ({products,clearCart}) => {
+const Cart = ({products,clearCart,randomProduct}) => {
     return (
-        <div >
+        <div className='cart-content'>
+            <h3>Selected Monitor</h3>
             {
-                products.map(product => <CartItem key={product.key} product={product}></CartItem>)
+                products.map(product => <CartItem key={product.id} product={product}></CartItem>)
             }
-            <div>
-                
-            <button>Choose One</button>
-            <button onClick={()=>clearCart()}>Choose Again</button>
+            <div className='cart-btn'>
+            <button onClick={()=>randomProduct()} className='choose-one-btn'>Choose One</button>
+            <button className='choose-again-btn' onClick={()=>clearCart()}>Choose Again</button>
             </div>
         </div>
     );
