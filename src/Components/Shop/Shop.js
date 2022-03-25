@@ -32,6 +32,10 @@ const Shop = () => {
             }
         }
     }
+
+    const clearCart = () =>{
+        setCartItems([]);
+    }
     return (
         <div className='shop-container'>
             <div className="product-container">
@@ -40,9 +44,8 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-            {
-                cartItems.map(product => <Cart product={product}></Cart> )
-            } 
+            <Cart products={cartItems} clearCart={clearCart}></Cart> 
+            
             </div>
         </div>
     );

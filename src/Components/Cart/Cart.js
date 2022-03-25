@@ -1,14 +1,18 @@
 import React from 'react';
 import './Cart.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
-const Cart = ({product}) => {
-    const {name,image} =product
+import CartItem from '../CartItem/CartItem';
+
+const Cart = ({products,clearCart}) => {
     return (
-        <div className='cart-product'>
-            <img src={image} alt="" />
-            <p>{name}</p>
-            <p><FontAwesomeIcon icon={faTrashCan} /></p>
+        <div >
+            {
+                products.map(product => <CartItem key={product.key} product={product}></CartItem>)
+            }
+            <div>
+                
+            <button>Choose One</button>
+            <button onClick={()=>clearCart()}>Choose Again</button>
+            </div>
         </div>
     );
 };
