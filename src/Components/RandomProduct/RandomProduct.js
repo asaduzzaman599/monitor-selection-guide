@@ -1,10 +1,9 @@
 import React from 'react';
-
+import './RandomProduct.css'
 const RandomProduct = ({product}) => {
-    console.log(product.id) 
     const {name,image} = product 
     return (
-        <div>
+        <div className='random-product'>
             <img src={image||''} alt="" />
             <p>{name||''}</p> 
         </div>

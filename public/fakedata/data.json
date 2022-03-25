@@ -7,27 +7,51 @@
     },
     {
         "id": 2,
-        "name": "SAMSUNG LF22T350 22'' Full HD IPS LED Monitor",
-        "price": 17000,
-        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/lf22t350fhnxza/lf22t350fhnxza-228x228.jpg"
+        "name": "LG 22MK600M 21.5 inch IPS Full HD LED Monitor",
+        "price": 15900,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/22mk600m/lg-22mk600m-1-500x500.jpg"
     },
     {
         "id": 3,
-        "name": "SAMSUNG LF22T350 22'' Full HD IPS LED Monitor",
-        "price": 17000,
-        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/lf22t350fhnxza/lf22t350fhnxza-228x228.jpg"
+        "name": "Asus VY249HE 24'' FHD IPS Eye Care Monitor",
+        "price": 21500,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/asus/vy249he/vy249he-01-228x228.jpg"
     },
     {
         "id": 4,
-        "name": "SAMSUNG LF22T350 22'' Full HD IPS LED Monitor",
+        "name": "Dell SE2219HX 21.5'' LED Full HD Monitor",
         "price": 17000,
-        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/lf22t350fhnxza/lf22t350fhnxza-228x228.jpg"
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/dell/se2219hx/se2219hx-500x500.png"
     
     },
     {
         "id": 5,
-        "name": "SAMSUNG LF22T350 22'' Full HD IPS LED Monitor",
-        "price": 17000,
-        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/lf22t350fhnxza/lf22t350fhnxza-228x228.jpg"
+        "name": "ViewSonic VA2215-H 22'' Full HD Monitor",
+        "price": 14000,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/viewsonic/va2215-h/va2215-h-01-500x500.jpg"
+    },
+    {
+        "id": 6,
+        "name": "HP M22f 22'' FHD IPS Monitor",
+        "price": 17500,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/m22f/m22f-228x228.jpg"
+    },
+    {
+        "id": 7,
+        "name": "PHILIPS 241V8 24'' IPS FHD Monitor",
+        "price": 20500,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/philips/241v8/221v8-01-228x228.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Dell S2421HN 24'' IPS AMD FreeSync Full HD Monitor",
+        "price": 22000,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/dell/s2421hn/s2421hn-1-228x228.jpg"
+    },
+    {
+        "id": 9,
+        "name": "MSI Optix G24C4 23.6 Inch FHD Curved LED Gaming Monitor With 144Hz Refresh Rate",
+        "price": 25000,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/msi/optix-g24c4/optix-g24c4-500x500.jpg"
     }
 ]

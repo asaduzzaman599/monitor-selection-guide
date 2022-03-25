@@ -7,7 +7,9 @@ const Header = () => {
                 <h2>
                     Monitor Selector
                 </h2>
+                <p>Select Any 4 Monitor</p>
             </nav>
+            
         </div>
     );
 };

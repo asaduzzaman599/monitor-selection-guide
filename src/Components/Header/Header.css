@@ -2,13 +2,16 @@
     background-color: #203239;
 }
 .nav{
-    height: 80px;
     width: 90%;
+    padding: 10px;
     display: flex;
+    flex-direction: column;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     margin: 0 auto;
 }
-.nav h2{
-    color:#EEEDDE
+.nav h2,.nav p{
+    color:#EEEDDE;
+    margin-bottom:5px;
 }
