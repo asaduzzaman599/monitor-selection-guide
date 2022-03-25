@@ -1,0 +1,13 @@
+.header{
+    background-color: #203239;
+}
+.nav{
+    height: 80px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.nav h2{
+    color:#EEEDDE
+}
