@@ -5,7 +5,7 @@ const Header = () => {
         <div className='header'>
             <nav className='nav'>
                 <h2>
-                    Monitor Selector
+                Monitor Selection Guide
                 </h2>
                 <p>Select Any 4 Monitor</p>
             </nav>

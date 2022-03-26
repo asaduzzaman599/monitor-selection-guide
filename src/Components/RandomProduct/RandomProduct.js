@@ -18,7 +18,7 @@ const RandomProduct = ({product}) => {
         </Modal.Header>
         <Modal.Body  className='random-product'>
         <img src={image} alt="" />
-        <h3>{name}</h3>
+        <h4>{name}</h4>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

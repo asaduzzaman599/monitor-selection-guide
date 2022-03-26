@@ -8,7 +8,7 @@ const Product = ({product,addToCart}) => {
     return (
         <div className='product'>
             <img src={image} alt="" />
-            <h3>{name}</h3>
+            <h5>{name}</h5>
             <p>Price: {price} BDT</p>
             <button onClick={()=>addToCart(product)}>ADD TO CART <FontAwesomeIcon icon={faShoppingCart} /></button>
         </div>
