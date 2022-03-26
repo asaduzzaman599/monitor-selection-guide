@@ -32,7 +32,7 @@ const Shop = () => {
                 storedCart.push(existProduct)
             }
         }
-        setCartItems([...cartItems,...storedCart])
+        setCartItems([...storedCart])
     },[products]);
 
     //button handler to add product in cart
