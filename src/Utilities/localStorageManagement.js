@@ -26,4 +26,23 @@ const getFromLS = () =>{
 
 }
 
-export {setToLS,getFromLS};
+const deleteIdFromLS = (id) =>{
+    let cart = localStorage.getItem('monitor-cart');
+    if(cart){
+        cart = JSON.parse(cart);
+    }else{
+        cart={}
+    }
+
+    if(cart[id]){
+        delete cart[id] 
+    }
+
+    localStorage.setItem('monitor-cart',JSON.stringify(cart));
+} 
+
+const clearLS = () =>{
+    localStorage.removeItem('monitor-cart');
+}
+
+export {setToLS,getFromLS,deleteIdFromLS,clearLS};

@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { getFromLS, setToLS } from '../../Utilities/localStorageManagement';
+import { clearLS, deleteIdFromLS, getFromLS, setToLS } from '../../Utilities/localStorageManagement';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import RandomProduct from '../RandomProduct/RandomProduct';
@@ -64,12 +64,14 @@ const Shop = () => {
     const clearCart = () =>{
         setCartItems([]);
         setRandom([]);
+        clearLS();
         
     }
 
     const removeFromCart = (id) =>{
         const remainingProduct = cartItems.filter(item => item.id !== id)
         setCartItems([...remainingProduct])
+        deleteIdFromLS(id);
     }
     return (
         <div className='shop-container'>
