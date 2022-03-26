@@ -3,7 +3,7 @@
 }
 .nav{
     width: 90%;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     flex-direction: column;
@@ -11,7 +11,12 @@
     justify-items: center;
     margin: 0 auto;
 }
-.nav h2,.nav p{
+.nav p{
     color:#EEEDDE;
+    margin-bottom:5px;
+}
+
+.nav h2{
+    color:#fff;
     margin-bottom:5px;
 }
