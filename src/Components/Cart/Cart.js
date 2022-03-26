@@ -4,7 +4,7 @@ import CartItem from '../CartItem/CartItem';
 
 const Cart = ({products,clearCart,randomProduct,removeFromCart}) => {
     return (
-        <div className='cart-content'>
+        <div className='cart'>
             <h3>Selected Monitor</h3>
             {
                 products.map(product => <CartItem key={product.id} removeFromCart={removeFromCart} product={product}></CartItem>)

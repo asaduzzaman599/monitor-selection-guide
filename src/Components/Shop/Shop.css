@@ -1,7 +1,7 @@
 .shop-container{
     margin-top: 80px;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
 }
 .product-container{
     width: 80%;
@@ -12,6 +12,11 @@
 }
 .cart-container{
     border-left: 2px solid rgba(0, 0, 0, 0.412) ;
+   
+}
+.cart-content{
+    position: sticky;
+    top: 0;
 }
 
 @media screen and (max-width:688px) {

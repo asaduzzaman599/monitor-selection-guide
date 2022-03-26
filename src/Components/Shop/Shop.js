@@ -8,7 +8,7 @@ import './Shop.css'
 const Shop = () => {
     const [products,setProucts] = useState([]);
     const [cartItems,setCartItems] = useState([]);
-    const [random,setRandom] = useState({});
+    const [random,setRandom] = useState([]);
 
 
     useEffect(
@@ -24,6 +24,8 @@ const Shop = () => {
         const exist = cartItems.find(item=> item.id === product.id);
 
         if(exist){
+            
+            alert('Already Selected')
         }else{
             if(cartItems.length < 4){
                 console.log(cartItems.length)
@@ -38,8 +40,7 @@ const Shop = () => {
     const randomProduct = () =>{
         if(cartItems.length){
             const number = Math.floor(Math.random()*cartItems.length);
-            setRandom(cartItems[number]);
-            setCartItems([]);
+            setRandom([cartItems[number]]);
         }else{
             alert('Cart is Empty')
         }
@@ -47,7 +48,7 @@ const Shop = () => {
 
     const clearCart = () =>{
         setCartItems([]);
-        setRandom({});
+        setRandom([]);
         
     }
 
@@ -65,10 +66,13 @@ const Shop = () => {
             </div>
             <div className="cart-container">
             
-            <Cart products={cartItems} clearCart={clearCart} removeFromCart={removeFromCart} randomProduct={randomProduct}></Cart> 
-            {
-                <RandomProduct product={random}></RandomProduct>
-            }
+                <div className='cart-content'>
+                <Cart products={cartItems} clearCart={clearCart} removeFromCart={removeFromCart} randomProduct={randomProduct}></Cart> 
+                {
+                    random.map(random =><RandomProduct key={random.id} product={random}></RandomProduct>)
+                }
+                </div>
+      
             </div>
         </div>
     );
