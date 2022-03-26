@@ -53,5 +53,23 @@
         "name": "MSI Optix G24C4 23.6 Inch FHD Curved LED Gaming Monitor With 144Hz Refresh Rate",
         "price": 25000,
         "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/msi/optix-g24c4/optix-g24c4-500x500.jpg"
+    },
+    {
+        "id": 10,
+        "name": "AOC 22B2HN 21.5'' FHD Monitor",
+        "price": 13900,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/aoc/22b2hn/22b2hn-03-228x228.jpg"
+    },
+    {
+        "id": 11,
+        "name": "HP V22 21.5'' LED Full HD Monitor",
+        "price": 13800,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/v22/v22-1-228x228.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Dell D1918H 18.5 Inch LED Monitor (VGA, HDMI)",
+        "price": 9500,
+        "image" : "https://www.startech.com.bd/image/cache/catalog/monitor/dell/d1918h/d1918h-01-228x228.jpg"
     }
 ]
