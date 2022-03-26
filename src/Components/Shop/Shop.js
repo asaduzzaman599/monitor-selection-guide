@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { setToLS } from '../../Utilities/localStorageManagement';
+import { getFromLS, setToLS } from '../../Utilities/localStorageManagement';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import RandomProduct from '../RandomProduct/RandomProduct';
@@ -12,14 +12,27 @@ const Shop = () => {
     const [random,setRandom] = useState([]);
 
 
+    useEffect(()=>{
+        const storedProduct = getFromLS();
+        const storedCart = [];
+        for(const id in storedProduct){
+
+            const existProduct = products.find(product => product.id === parseInt(id));
+            if(existProduct){
+                storedCart.push(existProduct)
+            }
+        }
+        setCartItems([...cartItems,...storedCart])
+        console.log('store',...storedCart);
+    },[products])
+
     useEffect(
         ()=>{
             fetch('fakedata/data.json')
             .then(res => res.json())
             .then(data => setProucts(data))
         }
-        ,[]
-    )
+        ,[])
 
     const addToCart = (product) =>{
         const exist = cartItems.find(item=> item.id === product.id);

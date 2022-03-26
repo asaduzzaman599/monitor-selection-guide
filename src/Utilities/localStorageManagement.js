@@ -14,5 +14,16 @@ const setToLS = (id) =>{
 
     localStorage.setItem('monitor-cart',JSON.stringify(cart))
 }
+const getFromLS = () =>{
+    let cart = localStorage.getItem('monitor-cart');
+    if(cart){
+        cart = JSON.parse(cart);
+    }else{
+        cart={}
+    }
 
-export {setToLS};
+    return cart;
+
+}
+
+export {setToLS,getFromLS};
