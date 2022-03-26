@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { setToLS } from '../../Utilities/localStorageManagement';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import RandomProduct from '../RandomProduct/RandomProduct';
@@ -31,6 +32,7 @@ const Shop = () => {
                 console.log(cartItems.length)
                 const newCart = [...cartItems,product];
                 setCartItems(newCart)
+                setToLS(product.id)
             }else{
                 alert('More Then 4 not allowed')
             }
