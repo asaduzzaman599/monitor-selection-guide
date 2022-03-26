@@ -28,7 +28,7 @@ const Cart = ({products,clearCart,removeFromCart}) => {
                 products.map(product => <CartItem key={product.id} removeFromCart={removeFromCart} product={product}></CartItem>)
             }
             <div className='cart-btn'>
-            <button onClick={()=>randomProduct()} className='choose-one-btn'>Choose One</button>
+            <button onClick={()=>randomProduct()} className='choose-one-btn'>Choose 1 For Me</button>
             <button className='choose-again-btn' onClick={()=>clearCart()}>Choose Again</button>
             {
                     random.map(random =><RandomProduct key={random.id} product={random}></RandomProduct>)
