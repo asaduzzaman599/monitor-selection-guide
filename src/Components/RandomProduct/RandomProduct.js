@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import './RandomProduct.css'
 const RandomProduct = ({product}) => {
+    
+    //distructuring
     const {name,image} = product 
+    
+    // state for modal 
     const [show, setShow] = useState(true);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   return (
     <>

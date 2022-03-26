@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
 const CartItem = ({product,removeFromCart}) => {
+    //distructuring
     const {name,image,id} = product
     return (
         <div className='cart-product'>

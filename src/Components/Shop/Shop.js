@@ -3,15 +3,25 @@ import React, { useEffect, useState } from 'react';
 import { clearLS, deleteIdFromLS, getFromLS, setToLS } from '../../Utilities/localStorageManagement';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
-import RandomProduct from '../RandomProduct/RandomProduct';
 import './Shop.css'
 
 const Shop = () => {
+    //state for set product data cart item
     const [products,setProucts] = useState([]);
     const [cartItems,setCartItems] = useState([]);
-    const [random,setRandom] = useState([]);
 
 
+    //use effect for load products data
+    useEffect(
+        ()=>{
+            fetch('fakedata/data.json')
+            .then(res => res.json())
+            .then(data => setProucts(data));
+        }
+        ,[])
+
+        
+    //use effect for load stored local storege cart item on load products
     useEffect(()=>{
         const storedProduct = getFromLS();
         const storedCart = [];
@@ -23,53 +33,49 @@ const Shop = () => {
             }
         }
         setCartItems([...cartItems,...storedCart])
-        console.log('store',...storedCart);
-    },[products])
+    },[products]);
 
-    useEffect(
-        ()=>{
-            fetch('fakedata/data.json')
-            .then(res => res.json())
-            .then(data => setProucts(data))
-        }
-        ,[])
-
+    //button handler to add product in cart
     const addToCart = (product) =>{
         const exist = cartItems.find(item=> item.id === product.id);
 
+        //condition check already added or not
         if(exist){
             
             alert('Already Selected')
         }else{
+
+             //condition check add product length not more then 4
             if(cartItems.length < 4){
-                console.log(cartItems.length)
+
                 const newCart = [...cartItems,product];
-                setCartItems(newCart)
-                setToLS(product.id)
+
+                //set state with new data
+                setCartItems(newCart);
+
+                //set in local storage
+                setToLS(product.id);
             }else{
-                alert('More Then 4 not allowed')
+
+                alert('More Than 4 not allowed');
             }
         }
     }
 
-    const randomProduct = () =>{
-        if(cartItems.length){
-            const number = Math.floor(Math.random()*cartItems.length);
-            setRandom([cartItems[number]]);
-        }else{
-            alert('Cart is Empty')
-        }
-    }
-
+    //clear cart
     const clearCart = () =>{
+        //set state
         setCartItems([]);
-        setRandom([]);
+        //clear local storage
         clearLS();
         
     }
 
+    //remove product from cart 
     const removeFromCart = (id) =>{
         const remainingProduct = cartItems.filter(item => item.id !== id)
+
+        //remove product from state and local storage
         setCartItems([...remainingProduct])
         deleteIdFromLS(id);
     }
@@ -84,10 +90,8 @@ const Shop = () => {
             <div className="cart-container">
             
                 <div className='cart-content'>
-                <Cart products={cartItems} clearCart={clearCart} removeFromCart={removeFromCart} randomProduct={randomProduct}></Cart> 
-                {
-                    random.map(random =><RandomProduct key={random.id} product={random}></RandomProduct>)
-                }
+                <Cart products={cartItems} clearCart={clearCart} removeFromCart={removeFromCart} ></Cart> 
+               
                 </div>
       
             </div>

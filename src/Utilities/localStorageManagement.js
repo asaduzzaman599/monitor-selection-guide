@@ -1,3 +1,4 @@
+//add prodcut id in local storage
 const setToLS = (id) =>{
     let cart = localStorage.getItem('monitor-cart');
     if(cart){
@@ -14,6 +15,8 @@ const setToLS = (id) =>{
 
     localStorage.setItem('monitor-cart',JSON.stringify(cart))
 }
+
+//get prodcut from local storage
 const getFromLS = () =>{
     let cart = localStorage.getItem('monitor-cart');
     if(cart){
@@ -26,6 +29,7 @@ const getFromLS = () =>{
 
 }
 
+//delete prodcut from local storage
 const deleteIdFromLS = (id) =>{
     let cart = localStorage.getItem('monitor-cart');
     if(cart){
@@ -41,6 +45,7 @@ const deleteIdFromLS = (id) =>{
     localStorage.setItem('monitor-cart',JSON.stringify(cart));
 } 
 
+//clear local storage
 const clearLS = () =>{
     localStorage.removeItem('monitor-cart');
 }
